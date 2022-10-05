@@ -59,7 +59,7 @@
 					<div class="form-group">
 						<label for="tool_selector">Name</label>
 						<select class="form-control" id="tool_selector" onchange="renderHole(this.options[this.selectedIndex])" required>
-							<option>-- Select tool --</option>
+							<option hidden selected>-- Select tool --</option>
 						</select>
 					</div>
 					<br>
@@ -77,7 +77,7 @@
 							<div class="form-group">
 								<label for="up_connection">Connection</label>
 								<select class="form-control" id="up_connection">
-									<option value="0">-- Select end --</option>
+									<option hidden selected value="0">-- Select end --</option>
 								</select>
 							</div>
 						</div>
@@ -95,7 +95,7 @@
 							<div class="form-group">
 								<label for="down_connection">Connection</label>
 								<select class="form-control" id="down_connection">
-									<option>-- Select end --</option>
+									<option hidden selected>-- Select end --</option>
 								</select>
 							</div>
 						</div>
