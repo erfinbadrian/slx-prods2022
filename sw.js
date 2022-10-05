@@ -9,9 +9,6 @@ self.addEventListener('install', (e) => {
         "./img/demo/favicon.ico",
         "./img/demo/apple-touch-icon-57x57.png",
         "./img/demo/apple-touch-icon-72x72.png",
-        "./img/demo/apple-touch-icon-76x76.png",       
-        "./js/object.js",
-        "./js/formula.js",
         "./js/form.js",
         ].map(url => new Request(url, {credentials: 'same-origin'})))
     })
