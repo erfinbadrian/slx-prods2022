@@ -488,7 +488,7 @@ navigator.serviceWorker.getRegistrations().then(function(registrations) {
 caches.delete("calc_schlumberger")
 
 alert("Local data has been deleted. Connect to internet then refresh the page to download a new version.")
-}
+
 // This function will trigger from button in page 
 // But be careful when triggering this function. 
 // Because you will need an internet connection
@@ -504,7 +504,7 @@ const resetSW = () => {
 	}
 	
 	// Delete registered ServiceWorker javascript file in devices
-
+}
 
 const resetForm = () => {
 	document.getElementById("calc_form").reset()
