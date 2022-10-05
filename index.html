@@ -63,36 +63,6 @@
         <form id="calc_form">
           <h4>Tool</h4>
           <div id="common_tool">
-            <div id="uphole">
-              <h4>Uphole</h4>
-              <div class="form-group">
-                <label for="up_rop2usc">ROP to shoulder collar</label>
-                <input class="form-control" type="number" id="up_rop2usc" placeholder="in inches, with dot">
-              </div>
-              <div class="form-group">
-                <label for="down_crossover">Crossover</label>
-                <input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
-              </div>
-              <div class="form-group">
-                <br>
-              <div class="form-group">
-                <label for="up_connection">Connection</label>
-                <select class="form-control" id="up_connection">
-                  <option value="0">-- Select end --</option>
-                </select>
-              </div>
-            </div>
-                <label for="down_crossover">Crossover</label>
-                <input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
-              </div>
-              <div class="form-group">
-                <label for="down_connection">Connection</label>
-                <select class="form-control" id="down_connection">
-                  <option>-- Select end --</option>
-                </select>
-              </div>
-            </div>
-          </div>
 
           <!-- Below is exception form tool -->
           <div id="flex_form" style="display: none;">
@@ -204,6 +174,39 @@
               </div>
             </div>
           </command-palette-tip>
+                      <div id="uphole">
+              <h4>Uphole</h4>
+              <div class="form-group">
+                <label for="up_rop2usc">ROP to shoulder collar</label>
+                <input class="form-control" type="number" id="up_rop2usc" placeholder="in inches, with dot">
+              </div>
+              <div class="form-group">
+                <label for="down_crossover">Crossover</label>
+                <input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
+              </div>
+              <div class="form-group">
+                <br>
+              <div class="form-group">
+                <label for="up_connection">Connection</label>
+                <select class="form-control" id="up_connection">
+                  <option value="0">-- Select end --</option>
+                </select>
+              </div>
+            </div>
+                <label for="down_crossover">Crossover</label>
+                <input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
+              </div>
+              <div class="form-group">
+                <label for="down_connection">Connection</label>
+                <select class="form-control" id="down_connection">
+                  <option>-- Select end --</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+
           <command-palette-tip
             class="color-fg-muted f6 px-3 py-1 my-2"
               data-scope-types="[&quot;&quot;]"
@@ -564,11 +567,7 @@
                   <p style="margin-top: 20px">Details</p>
                   <table class="table table-bordered table-sm" style="text-align: center">
                     <thead>
-                      <tr>
-                        <th scope="col">Connection</th>
-                        <th scope="col" id="res_up_label_0">ROP</th>
-                        <th scope="col" id="res_up_label_1">Crossover</th>
-                      </tr>
+
                     </thead>
                     <tbody>
                       <tr>
