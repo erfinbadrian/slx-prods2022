@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-xs-0 offset-xs-0 col-sm-6 offset-sm-3" style="border: 0px solid red;">
+			<div class="col-xs-0 offset-xs-0 col-sm-8 offset-sm-2" style="border: 0px solid red;">
 				<form id="calc_form">
 					<h4>Tool</h4>
 					<div class="form-group">
@@ -64,41 +64,55 @@
 					</div>
 					<br>
 					<div id="common_tool">
-						<div id="uphole">
-							<h4>Uphole</h4>
-							<div class="form-group">
-								<label for="up_rop2usc">ROP to shoulder collar</label>
-								<input class="form-control" type="number" id="up_rop2usc" placeholder="in inches, with dot">
+						<div class="row">
+							<div class="col-lg-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div id="uphole">
+											<h4>Uphole</h4>
+											<div class="form-group">
+												<label for="up_rop2usc">ROP to shoulder collar</label>
+												<input class="form-control" type="number" id="up_rop2usc" placeholder="in inches, with dot">
+											</div>
+											<div class="form-group">
+												<label for="up_crossover">Crossover</label>
+												<input class="form-control" type="number" id="up_crossover" placeholder="in inches, with dot (optional)">
+											</div>
+											<div class="form-group">
+												<label for="up_connection">Connection</label>
+												<select class="form-control" id="up_connection">
+													<option hidden selected value="0">-- Select end --</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="up_crossover">Crossover</label>
-								<input class="form-control" type="number" id="up_crossover" placeholder="in inches, with dot (optional)">
-							</div>
-							<div class="form-group">
-								<label for="up_connection">Connection</label>
-								<select class="form-control" id="up_connection">
-									<option hidden selected value="0">-- Select end --</option>
-								</select>
+							<div class="col-lg-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div id="downhole">
+											<h4>Downhole</h4>
+											<div class="form-group">
+												<label for="down_rop2usc">ROP to shoulder collar</label>
+												<input class="form-control" type="number" id="down_rop2usc" placeholder="in inches, with dot">
+											</div>
+											<div class="form-group">
+												<label for="down_crossover">Crossover</label>
+												<input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
+											</div>
+											<div class="form-group">
+												<label for="down_connection">Connection</label>
+												<select class="form-control" id="down_connection">
+													<option hidden selected>-- Select end --</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<br>
-						<div id="downhole">
-							<h4>Downhole</h4>
-							<div class="form-group">
-								<label for="down_rop2usc">ROP to shoulder collar</label>
-								<input class="form-control" type="number" id="down_rop2usc" placeholder="in inches, with dot">
-							</div>
-							<div class="form-group">
-								<label for="down_crossover">Crossover</label>
-								<input class="form-control" type="number" id="down_crossover" placeholder="in inches, with dot (optional)">
-							</div>
-							<div class="form-group">
-								<label for="down_connection">Connection</label>
-								<select class="form-control" id="down_connection">
-									<option hidden selected>-- Select end --</option>
-								</select>
-							</div>
-						</div>
+						
 					</div>
 					
 					<!-- Below is exception form tool -->
@@ -134,117 +148,134 @@
 	
 	<div class="container mt-5" id="result_wrapper" style="display: none;">
 		<div class="row">
-			<div class="col-xs-0 offset-xs-0 col-sm-6 offset-sm-3" style="border: 0px solid red;">
+			<div class="col-xs-0 offset-xs-0 col-sm-8 offset-sm-2" style="border: 0px solid red;">
 				<section>
 					<div>
 						<h4><b>Tool</b></h4>
 						<h5 id="res_tool_name"></h5>
 					</div>
 					<br>
-					<div id="res_uphole">
-						<h4><b>Uphole</b></h4>
-						<form>
-							<div class="form-row">
-								<div class="col-sm-12">
-									<p style="margin-top: 20px">Details</p>
-									<table class="table table-bordered table-sm" style="text-align: center">
-										<thead>
-											<tr>
-												<th scope="col">Connection</th>
-												<th scope="col" id="res_up_label_0">ROP</th>
-												<th scope="col" id="res_up_label_1">Crossover</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><span id="up_res_conn"></span></td>
-												<td><span id="up_res_rop2usc"></span> inch</td>
-												<td><span id="up_res_crossover"></span> inch</td>
-											</tr>
-										</tbody>
-									</table>
-									<p id="uphole_details_note" style="font-size: 13px;color: #006767;font-style: italic; display: none;">* Measurement taken from Extender base to end of wire tube, not the nose</p>
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<div class="card">
+								<div class="card-body">
+									<div id="res_uphole">
+										<h4><b>Uphole</b></h4>
+										<form>
+											<div class="form-row">
+												<div class="col-sm-12">
+													<p style="margin-top: 20px">Details</p>
+													<table class="table table-bordered table-sm" style="text-align: center">
+														<thead>
+															<tr>
+																<th scope="col">Connection</th>
+																<th scope="col" id="res_up_label_0">ROP</th>
+																<th scope="col" id="res_up_label_1">Crossover</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><span id="up_res_conn"></span></td>
+																<td><span id="up_res_rop2usc"></span> inch</td>
+																<td><span id="up_res_crossover"></span> inch</td>
+															</tr>
+														</tbody>
+													</table>
+													<p id="uphole_details_note" style="font-size: 13px;color: #006767;font-style: italic; display: none;">* Measurement taken from Extender base to end of wire tube, not the nose</p>
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="col-xs-12" style="width: 100%">
+													<label for="up_fin_len_res">Final length</label>
+													<input type="text" class="form-control" id="up_fin_len_res" value="" readonly>
+													<div class="valid-feedback" id="up_valid_comment"></div>
+													<div class="invalid-feedback" id="up_invalid_comment"></div>
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="col-xs-12">
+													<p>Match extender</p>
+													<ul id="up_res_invalid_ext" style="display: none;"><li id="up_res_invalid_ext_text"></li></ul>
+													<ol id="up_res_ext_list"></ol>
+												</div>
+												<br>
+											</div>
+											<div class="form-row" id="up_linked_wrapper">
+												<div class="col-xs-12">
+													<p>Available extender</p>
+													<ol id="up_res_ext_list_linked"></ol>
+												</div>
+											</div>
+										</form>
+										<br><br>
+									</div>
 								</div>
 							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-xs-12" style="width: 100%">
-									<label for="up_fin_len_res">Final length</label>
-									<input type="text" class="form-control" id="up_fin_len_res" value="" readonly>
-									<div class="valid-feedback" id="up_valid_comment"></div>
-									<div class="invalid-feedback" id="up_invalid_comment"></div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<!-- Downhole result will be here -->
+							<div class="card">
+								<div class="card-body">
+
+									<div id="res_downhole">
+										<h4><b>Downhole</b></h4>
+										<form>
+											<div class="form-row">
+												<div class="col-sm-12">
+													<p style="margin-top: 20px">Details</p>
+													<table class="table table-bordered table-sm" style="text-align: center">
+														<thead>
+															<tr>
+																<th scope="col">Connection</th>
+																<th scope="col" id="res_down_label_0">ROP</th>
+																<th scope="col" id="res_down_label_1">Crossover</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><span id="down_res_conn"></span></td>
+																<td><span id="down_res_rop2usc"></span> inch</td>
+																<td><span id="down_res_crossover"></span> inch</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="col-xs-12" style="width: 100%">
+													<label for="down_fin_len_res">Final length</label>
+													<input type="text" class="form-control" id="down_fin_len_res" value="" readonly>
+													<div class="valid-feedback" id="down_valid_comment"></div>
+													<div class="invalid-feedback" id="down_invalid_comment"></div>
+												</div>
+											</div>
+											<br>
+											<div class="form-row">
+												<div class="col-xs-12">
+													<p>Match extender</p>
+													<ul id="down_res_invalid_ext" style="display: none;"><li id="down_res_invalid_ext_text"></li></ul>
+													<ol id="down_res_ext_list"></ol>
+												</div>
+												<br>
+											</div>
+											<div class="form-row" id="down_linked_wrapper">
+												<div class="col-xs-12">
+													<p>Available extender</p>
+													<ol id="down_res_ext_list_linked"></ol>
+												</div>
+											</div>
+										</form>
+									</div>
 								</div>
 							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-xs-12">
-									<p>Match extender</p>
-									<ul id="up_res_invalid_ext" style="display: none;"><li id="up_res_invalid_ext_text"></li></ul>
-									<ol id="up_res_ext_list"></ol>
-								</div>
-								<br>
-							</div>
-							<div class="form-row" id="up_linked_wrapper">
-								<div class="col-xs-12">
-									<p>Available extender</p>
-									<ol id="up_res_ext_list_linked"></ol>
-								</div>
-							</div>
-						</form>
-						<br><br>
+						</div>
 					</div>
 					
-					<!-- Downhole result will be here -->
-					<div id="res_downhole">
-						<h4><b>Downhole</b></h4>
-						<form>
-							<div class="form-row">
-								<div class="col-sm-12">
-									<p style="margin-top: 20px">Details</p>
-									<table class="table table-bordered table-sm" style="text-align: center">
-										<thead>
-											<tr>
-												<th scope="col">Connection</th>
-												<th scope="col" id="res_down_label_0">ROP</th>
-												<th scope="col" id="res_down_label_1">Crossover</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><span id="down_res_conn"></span></td>
-												<td><span id="down_res_rop2usc"></span> inch</td>
-												<td><span id="down_res_crossover"></span> inch</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-xs-12" style="width: 100%">
-									<label for="down_fin_len_res">Final length</label>
-									<input type="text" class="form-control" id="down_fin_len_res" value="" readonly>
-									<div class="valid-feedback" id="down_valid_comment"></div>
-									<div class="invalid-feedback" id="down_invalid_comment"></div>
-								</div>
-							</div>
-							<br>
-							<div class="form-row">
-								<div class="col-xs-12">
-									<p>Match extender</p>
-									<ul id="down_res_invalid_ext" style="display: none;"><li id="down_res_invalid_ext_text"></li></ul>
-									<ol id="down_res_ext_list"></ol>
-								</div>
-								<br>
-							</div>
-							<div class="form-row" id="down_linked_wrapper">
-								<div class="col-xs-12">
-									<p>Available extender</p>
-									<ol id="down_res_ext_list_linked"></ol>
-								</div>
-							</div>
-						</form>
-					</div>
+					
+					
 					
 					<br>
 					<div>
