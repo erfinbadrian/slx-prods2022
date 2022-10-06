@@ -21,6 +21,14 @@ var DATASET = {
             	{"id": 4, "name": "EXTF-DA", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": false}, 
             	{"id": 5, "name": "EXTF-DB", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": false}, 
             	
+                {"id": 30, "name": "EXTF-AA", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
+                {"id": 31, "name": "EXTF-BA", "min": 10.41, "max": 12.75, "tolerance": 0, "require_crossover": true}, 
+                {"id": 32, "name": "EXTF-CA", "min": 8.06, "max": 10.40, "tolerance": 0, "require_crossover": true}, 
+                {"id": 33, "name": "EXTF-DA", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
+                {"id": 34, "name": "EXTF-DB", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
+
+
+
             	{"id": 6, "name": "MEXD-GA", "min": 22.36, "max": 24.36, "tolerance": 26.86, "require_crossover": true}, 
             	{"id": 7, "name": "MEXD-DB", "min": 25.36, "max": 27.76, "tolerance": 30.26, "require_crossover": true}, 
             	{"id": 8, "name": "MEXD-BA", "min": 27.82, "max": 30.16, "tolerance": 32.66, "require_crossover": true}, 
@@ -51,11 +59,7 @@ var DATASET = {
                 {"id": 28, "name": "RTLF-BD", "min": 14.96, "max": 17.58, "tolerance": 0, "require_crossover": false},
                 {"id": 29, "name": "RTLF-DA", "min": 14.96, "max": 17.58, "tolerance": 0, "require_crossover": false},
 
-                {"id": 30, "name": "EXTF-AA", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
-                {"id": 31, "name": "EXTF-BA", "min": 10.41, "max": 12.75, "tolerance": 0, "require_crossover": true}, 
-                {"id": 32, "name": "EXTF-CA", "min": 8.06, "max": 10.40, "tolerance": 0, "require_crossover": true}, 
-                {"id": 33, "name": "EXTF-DA", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
-                {"id": 34, "name": "EXTF-DB", "min": 12.82, "max": 15.16, "tolerance": 0, "require_crossover": true}, 
+                
             ]
         }
     },
