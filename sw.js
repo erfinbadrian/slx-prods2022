@@ -8,12 +8,7 @@ self.addEventListener('install', function(e) {
 
        "./img/demo/favicon.ico",
        "./img/demo/apple-touch-icon.png",
-       "./img/demo/apple-touch-icon-57x57.png",
-       "./img/demo/apple-touch-icon-72x72.png",
-       "./img/demo/apple-touch-icon-76x76.png",
-       "./img/demo/apple-touch-icon-114x114.png",
-       "./img/demo/apple-touch-icon-120x120.png",
-       "./img/demo/apple-touch-icon-144x144.png",
+
        "./img/demo/apple-touch-icon-152x152.png",
        "./img/demo/apple-touch-icon-180x180.png",
 
@@ -33,7 +28,7 @@ self.addEventListener('install', function(e) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      console.log("getting from cache", event.request.url)
+      console.log("getting from server main storage cache", event.request.url)
       return response || fetch(event.request)
     })
   )
