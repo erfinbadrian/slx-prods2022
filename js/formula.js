@@ -62,13 +62,7 @@ const get_extender_type = (id_tool, hole, fin_len, crossover = 0) => {
 }
 
 
-/* ADN 4 */
-const adn4_downhole_box = (rop2usc, crossover) => {
-	var fin_len = rop2usc-8.435+crossover-10.435
-	var ext_type = get_extender_type(1, "downhole", fin_len, crossover)
-	var ret_data = {"extender": ext_type, "fin_len": fin_len}
-	return ret_data
-}
+
 
 
 /*ECOSCOPE*/
